@@ -1,0 +1,11 @@
+O tipo das variáveis altera de acordo com o conteúdo inserido
+Comandos no terminal (Ctrl+Shift+')
+    node
+    var n = 200
+    typeof n // Imprime o tipo da variável
+        = 'number'
+    n = "Google"
+    n = 'Google'
+    n = `Google`
+    typeof n
+        = 'string'

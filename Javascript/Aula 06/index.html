@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá, Mundo!</title>
+</head>
+<Style>
+    body {
+        background-color: hsl(221, 49%, 45%); /* Comentário */
+        color: white;
+    }
+</Style>
+<body>
+    <h1>Olá, Mundo!</h1> <!-- Comentário -->
+    <p id="resultado"></p>
+    <p id="sumir">Texto que vai sumir</p>
+    <script>
+        function soma(nome, num1, num2){
+            var resultado = num1 + num2
+            document.getElementById("resultado").innerHTML = `O aluno ${nome} realizou a operação ${num1} + ${num2} = ${resultado}`
+            document.getElementById("sumir").style.visibility = "hidden" //sumir com o texto
+            //document.getElementById("sumir").style.display = "none" //sumir com o texto
+        }
+        var nome = window.prompt('Qual é seu nome?') // Comentário
+        window.alert('É um grande prazer te conhecer, ' + nome + '!')
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        soma(nome, n1, n2)
+        /*
+            var n1 = 1545.5
+            n1.toFixed(2) //Imprime o valor com 2 casas decimais
+                '1545.5'
+            n1.toFixed(2).Replace('.', ',') // Troco o '.' por ','
+                '1545,5'
+
+            //Converte o valor para a modela local informada
+            n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+                'R$ 1.545,50'
+            n1.toLocaleString('pt-BR', {style: 'currency', currency: USD'})
+                'US$ 1.545,50'
+            n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})
+                'Є 1.545,50'
+            */
+    </script>
+</body>
+</html>

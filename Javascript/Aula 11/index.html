@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <Style>
+        body {
+            background-color: rgb(209, 170, 118);
+        }
+        div {
+            height: 25px;
+            width: 80px;
+            text-align: center;
+            background-color: rgb(0, 255, 255);
+        }
+        input {
+            width: 75px;
+        }
+    </Style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" name="n1" id="n1">
+    <select name="sinal" id="sinal">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="**">**</option>
+    </select>
+    <input type="number" name="n2" id="n2">
+    =
+    <input onclick="tratarDados()" type="button" value="Calcular">
+    <p id="resultado"></p>
+    <script>
+        function tratarDados() {
+            var n1 = window.document.getElementById("n1")
+            var n2 = window.document.getElementById("n2")
+            var sinal = window.document.getElementById("sinal").value
+            var n1 = Number(n1.value)
+            var n2 = Number(n2.value)
+            var resultado
+            switch (sinal) {
+                case "+":
+                    resultado = somar(n1, n2)
+                    break;
+                case "-":
+                    resultado = subtrair(n1, n2)
+                    break;
+                case "*":
+                    resultado = multiplicar(n1, n2)
+                    break;
+                case "/":
+                    resultado = dividir(n1, n2)
+                    break;
+                case "**":
+                    resultado = elevar(n1, n2)
+                    break;
+            
+                default:
+                    break;
+            }
+            window.document.getElementById("resultado").innerHTML = `${n1} ${sinal} ${n2} = ${resultado}`
+        }
+
+        function somar(n1, n2) {
+            return n1 + n2
+        }
+        function subtrair(n1, n2) {
+            return n1 - n2
+        }
+        function multiplicar(n1, n2) {
+            return n1 * n2
+        }
+        function dividir(n1, n2) {
+            return n1 / n2
+        }
+        function elevar(n1, n2) {
+            return n1 ** n2
+        }
+    </script>
+</body>
+</html>

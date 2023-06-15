@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        Verificador de Idade
+    </header>
+    <main>
+        <div id="formulario">
+            <form>
+                <label for="dataNascimento">Data de Nascimento: </label>
+                <input type="date" id="dataNascimento">
+                <br>Sexo:
+                <input type="radio" id="masculino" name="sexo">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="sexo">
+                <label for="feminino">Feminino<br></label>
+                <button type="submit" onclick="verificar()">Verificar</button>
+            </form>
+        </div>
+        <div>
+            <img id="imagem" src="media/Moaninha.png">
+        </div>
+    </main>
+    <footer>
+        &copy; CursoemVídeo
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(54, 166, 231);
+    text-align: center;
+    color: white;
+    font-family: cursive;
+}
+main {
+    margin: auto;
+    text-align: left;
+    width: 400px;
+    height: 250x;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form button{
+    width: 75px;
+}

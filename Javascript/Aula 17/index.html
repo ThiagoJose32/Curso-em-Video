@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h1><strong>Vamos contar</strong></h1>
+    </header>
+    <main>
+        <div id="form">
+            <div>
+                <label for="numInicio">Início: </label>
+                <input type="number" id="numInicio">
+            </div>
+            <div>
+                <label for="numFim">Fim: </label>
+                <input type="number" id="numFim">
+            </div>
+            <div>
+                <label for="numPasso">Passo: </label>
+                <input type="number" id="numPasso">
+            </div>
+            <button onclick="contar()">Contar</button>
+        </div>
+        <div id="resultado">
+            Preparando a contagem...
+        </div>
+        
+    </main>
+    <footer>
+        <h4>&copy; <i>CursoemVideo</i></h4>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

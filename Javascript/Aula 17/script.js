@@ -1,18 +1,31 @@
 function contar() {
-    var inicio = Number(document.getElementById('numInicio').value)
-    var fim = Number(document.getElementById('numFim').value)
-    var passo = Number(document.getElementById('numPasso').value)
+    var inicio = document.getElementById('numInicio')
+    var fim = document.getElementById('numFim')
+    var passo = document.getElementById('numPasso')
     var resultado = document.getElementById('resultado')
 
-    var icon = document.createElement('i')
-    icon.setAttribute('class', 'fa fa-hand-o-right')
 
-    var p = document.createElement('p')
-    var node
+    if(inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        resultado.style.color = "red"
+        resultado.innerHTML = 'Preencha todos os campos!'
+    } else if(Number(passo.value) <= 0){
+            resultado.style.color = "red"
+            resultado.innerHTML = 'Passo inválido!'
+    } else {
+        inicio = Number(inicio.value)
+        fim = Number(fim.value)
+        passo = Number(passo.value)
 
-    resultado.innerHTML = `Contando: `
-    for(inicio; inicio < fim; inicio+=passo) {
-        resultado.innerHTML += `${inicio} \u{1F449} `
+        resultado.innerHTML = `Contando: </br>`
+        if(inicio < fim) {
+            for(inicio; inicio < fim; inicio += passo) {
+                resultado.innerHTML += `${inicio} \u{1F449} `
+            }
+        } else {
+            for(inicio; inicio > fim; inicio -= passo) {
+                resultado.innerHTML += `${inicio} \u{1F449} `
+            }
+        }
+        resultado.innerHTML += `\u{1F3C1}`
     }
-    resultado.innerHTML += `\u{1F60E}`
 }

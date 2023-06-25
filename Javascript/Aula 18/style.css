@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(100, 155, 255);
+    color: white;
+    text-align: center;
+    font-family: cursive;
+}
+main {
+    text-align: left;
+    padding: 20px;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+}

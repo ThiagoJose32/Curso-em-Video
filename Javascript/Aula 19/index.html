@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analisador de Números</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -13,15 +15,16 @@
         <div>
             <label for="numero">Número (entre 1 e 100): </label>
             <input type="number" id="numero">
-            <button>Adicionar</button>
+            <button onclick="Adicionar()">Adicionar</button>
         </div>
         <div>
-            <select id="dropdown" size="10">
-                <option></option>
-            </select>
+            <select id="select" size="10"></select>
+            <button onclick="Verificar()">Verificar</button>
+        </div>
+        <div id="resultados">
+
         </div>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
